@@ -14,9 +14,9 @@ source ./venv/bin/activate ||  echo "virtual environment not found"
 echo "successfully activated your virtual environment"
 
 echo "about to install from requirements.txt"
-sudo -H ./venv/bin/pip3 install -r requirements.txt
+./venv/bin/pip3 install -r requirements.txt
 
 echo "Installing Django Channels"
-sudo ./venv/bin/pip3 install channels
+./venv/bin/pip3 install channels
 
 echo "Finished installing dependencies"
