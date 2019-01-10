@@ -17,6 +17,6 @@ echo "about to install from requirements.txt"
 sudo -H ./venv/bin/pip3 install -r requirements.txt
 
 echo "Installing Django Channels"
-sudo ./venv/bin/pip3 install challens
+sudo ./venv/bin/pip3 install channels
 
 echo "Finished installing dependencies"
