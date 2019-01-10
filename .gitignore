@@ -132,6 +132,3 @@ venv.bak/
 *.idea/
 *.idea/*
 *.idea*
-
-
-/frontend/src/app/config/config.ts
