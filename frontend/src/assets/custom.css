@@ -1,0 +1,148 @@
+/*
+* Put your custom CSS here
+* Creator: Karan Pahawa (kpahawa@deloitte.com)
+* Created: 3/20/18
+*/
+
+.no-bottom-border {
+    border-bottom: none !important;
+}
+
+.lightgrey-bg {
+    background: lightgrey !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.float-right {
+    float: right !important;
+}
+
+.float-left {
+    float: left !important;
+}
+
+.margin-bottom {
+    margin-bottom: 1em !important;
+}
+
+.blue-header {
+    background-color: #00478D  !important;
+    color: white !important;
+    border-left: 1px white solid!important;
+}
+
+.solid-header-left {
+  border-left: .5px #00487D solid !important;
+}
+
+.solid-header-right {
+  border-right: .5px #00487D solid !important;
+}
+
+.orange-header {
+    background-color: #E1F2FF !important;
+    color: #00487D !important;
+}
+
+.secondary-color {
+    background-color: #F9CED3 !important;
+    /* color: #9B1324 !important; */
+}
+
+.primary-color {
+    background-color: rgba(186, 227, 112, .7) !important;
+    /* color: #264429 !important; */
+}
+
+.medium-height {
+    height: 4em !important;
+}
+
+.cell-height {
+  height: 7em !important;
+}
+
+.small-height {
+    height: 2em !important;
+}
+.solid-bottom {
+   border-bottom: .5px #00487D solid !important;
+}
+
+.solid-left {
+    border-left: .5px #00487D solid !important;
+}
+
+.solid-right {
+    border-right: .5px #00487D solid !important;
+}
+
+.solid-right-soft {
+    border-right-style: solid !important;
+    border-right-width: 1px !important;
+    border-right-color: rgba(34, 36, 38, 0.1) !important;
+}
+
+
+.small.text {
+    font-size: 12px;
+}
+
+.hover-pointer {
+    cursor: pointer;
+}
+
+.home-nav {
+    margin-top: 1.5em;
+    margin-left: 2em;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.top-v-align {
+    vertical-align: top !important;
+}
+
+.dataTables_length {
+    margin-bottom: .5em;
+}
+
+.dataTables_filter {
+    margin-bottom: .5em;
+}
+
+input[type=checkbox][disabled]{
+  opacity: .65;
+}
+
+#vlanTable_wrapper {
+    margin-top: 1em;
+}
+
+.test-progress-bar {
+    width: 15.5em !important;
+    font-size: small !important;
+}
+
+.column_header {
+    background: #f9fafb;
+    text-align: inherit;
+    color: rgba(0,0,0,.87);
+    padding: .92857143em .78571429em;
+    vertical-align: middle;
+    font-style: none;
+    font-weight: 700;
+    text-transform: none;
+    border-bottom: 1px solid rgba(34,36,38,.1);
+    border-left: none;
+}
+
+
+.bad_sites {
+    background-color: #ffdfd2 !important;
+}

@@ -1,0 +1,28 @@
+<div class="ui container" style="width: 50%;">
+  <div class="ui large label">Messages for room - {{roomName}}</div>
+  <br>
+
+  <ng-container *ngFor="let message of messages">
+    <div class="event">
+      <div class="ui raised segment">
+        <div class="ui right red label ribbon" *ngIf="message.sender === currentUser; else someoneElse">You</div>
+        <ng-template #someoneElse>
+          <div class="ui blue label ribbon">{{message.sender}}</div>
+        </ng-template>
+        <div class="content">
+          <div class="extra-text" [ngClass]="{'textRight': message.sender === currentUser}">{{ message.message }}</div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+
+  <br>
+  <div class="ui input focus">
+    <input type="text" 
+      placeholder="message"
+      name="curMessage"
+      [(ngModel)]="curMessage" 
+      [ngModelOptions]="{standalone: true}"/>
+  </div>
+  <button class="ui green button" (click)="sendMessage()" [disabled]="curMessage.length === 0">Submit Message</button>
+</div>

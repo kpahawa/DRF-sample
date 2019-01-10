@@ -1,0 +1,18 @@
+<h4>Enter a chat room:</h4>
+<div class="ui input">
+    <input type="text" 
+      placeholder="Your name?"
+      name="userName"
+      [(ngModel)]="userName" 
+      [ngModelOptions]="{standalone: true}"/>
+  </div>
+<div class="ui input">
+  <input type="text" 
+    placeholder="Room name"
+    name="roomName"
+    [(ngModel)]="roomName" 
+    [ngModelOptions]="{standalone: true}"/>
+</div>
+<button class="ui red button"
+        (click)="createChatRoom()"
+        [disabled]="roomName.length === 0 || userName.length === 0"> Enter room</button>
