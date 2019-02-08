@@ -1,23 +1,3 @@
 # Jenkins-Sample
-Changed here again
-Here is another awesome commit...
 
-
-life changing stuff
-
-
-# Wow this is so cool
-
-
-## dev updated
-
-merge into master for me please!
-
-
-Updated the readme here!
-
-
-Another readme update here
-
-
-Making another readme update here. I am so awesome. 
+Here is the Jenkins sample readme doc
