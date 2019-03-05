@@ -12,6 +12,8 @@ RUN chmod +x /app/frontend/
 RUN mkdir /app/staticfiles/
 RUN chmod +x /app/staticfiles/ 
 
+RUN  chmod -R 777 /app
+
 RUN pip3.6 install -r requirements.txt
 
 EXPOSE 15672
