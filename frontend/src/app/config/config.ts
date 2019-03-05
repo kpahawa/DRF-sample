@@ -4,8 +4,8 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class Config {
     private readonly dev = {
-        serverAndProtocol: '127.0.0.1',
-        port: 8205,
+        serverAndProtocol: null,
+        port: null,
         // set dev parent URL here
         parentURL: "http://127.0.0.1:8201",
         urlPrefix: null
@@ -18,5 +18,5 @@ export class Config {
         parentURL: 'http://localhost:4200',
         urlPrefix: null
     };
-    public readonly ActiveEnvironment = this.prod;
+    public readonly ActiveEnvironment = this.dev;
 } 

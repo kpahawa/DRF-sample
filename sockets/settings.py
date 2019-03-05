@@ -15,7 +15,7 @@ SECRET_KEY = '+f0s-y9bi#0#+i!-9(lnuyc&1d^51*w5t%1zb!mxhq*_+urfue'
 
 # TODO SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+ENV = os.environ.get('environment', 'DEV')
 # TODO SECURITY WARNING: Set this value to False when going into production!
 
 SESSION_SAVE_EVERY_REQUEST = True
@@ -26,8 +26,6 @@ INSTALLED_APPS = [
     # Rest framework
     'rest_framework',
     'corsheaders',
-    # Django channels
-    'channels',
     # Project applications
     'chat',
     # Django defaults
@@ -56,15 +54,6 @@ MIDDLEWARE = [
 STATICFILES_STORAGE = 'spa.storage.SPAStaticFilesStorage'
 
 ROOT_URLCONF = 'sockets.urls'
-ASGI_APPLICATION = "sockets.routing.application"
-CHANNEL_LAYERS = {   # using a Redis backend as suggested by the documentation
-    'default': {
-        'BACKEND': 'channels_redis.core.RedisChannelLayer',
-        'CONFIG': {
-            "hosts": [('127.0.0.1', 6379)],
-        },
-    },
-}
 
 TEMPLATES = [
     {

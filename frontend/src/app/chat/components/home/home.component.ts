@@ -11,17 +11,25 @@ import { ApiUrlFactory } from '../../../services/api-url-factory.service';
 export class HomeComponent implements OnInit {
   private roomName = '';
   private userName = '';
+  private randInt: number;
+  private randMessage: string;
 
-  constructor(private router: Router, private http: HTTPService) { }
+  constructor(private router: Router, private http: HTTPService, private factory: ApiUrlFactory) { }
 
   ngOnInit() {
+    const baseURL = this.factory.getBaseUrl() + 'chat/';
+    const backendURL = baseURL + 'home';
+    this.http.getObject(backendURL).subscribe(
+        data => {
+          console.log("data", data);
+          this.randInt = data.int;
+          this.randMessage = data.message;
+        }
+    );
   }
 
   createChatRoom() {
-    if (this.roomName.length > 0 && this.userName.length > 0) {
-      sessionStorage.setItem('user', this.userName);
-      this.router.navigate(['room', this.roomName]);
-    }
+    alert("Functionality not developed");
   }
 
 }

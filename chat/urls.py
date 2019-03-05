@@ -7,6 +7,6 @@ app_name = 'chat'
 
 
 urlpatterns = [
-    url('get_url', views.get_backend_url),
-    url('get_url/', views.get_backend_url),
+    url('home', views.home),
+    url('home/', views.home),
 ]
