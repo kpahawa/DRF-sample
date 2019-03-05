@@ -1,4 +1,4 @@
-FROM uscc-centos-py36-ora12c-anglr8:latest
+FROM openshift/uscc-centos-py36-ora12c-nginx-anglr8:latest
 
 WORKDIR /app
 
