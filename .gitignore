@@ -27,6 +27,7 @@ build/
 develop-eggs/
 frontend/node_modules
 staticfiles/
+dist/
 downloads/
 eggs/
 .eggs/
