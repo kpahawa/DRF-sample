@@ -1,0 +1,37 @@
+def templateName = 'chatapp-template'
+def templatePath = 'https://ilscha03-github-01.uscc.com/raw/kpaha001/deployment-templates/master/deployment-template.json?token=AAAAXX7vAWp9bAfvDrQXRjEpkFBRViX_ks5chYxIwA%3D%3D'
+
+pipeline {
+  agent {
+    docker {
+      // putting the agent here instead of in each step will ensure that all stages use the same agent
+      image 'openshift/uscc-centos-py36-ora12c-nginx-anglr8:latest'
+    }
+  }
+  triggers {
+
+  }
+  stages {
+    stage('preamble') {
+      steps {
+          script {
+              openshift.withCluster() {
+                  openshift.withProject() {
+                      echo "Using project: ${openshift.project()}"
+                  }
+              }
+          }
+      }
+    }
+    stage('checkout') {
+      echo "In step checkout..."
+    }
+    stage('setup') {
+      steps {
+        script {
+          sh 'pip3.6 install -r requirements.txt'
+        }
+      }
+    }
+  }
+}
