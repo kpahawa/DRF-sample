@@ -1,4 +1,4 @@
-FROM nas-redesign-test/centos
+FROM uscc-centos-py36-ora12c-nginx-anglr8:latest
 
 WORKDIR /app
 
@@ -6,12 +6,6 @@ ADD . /app
 
 ADD start.sh /app/start.sh
 RUN chmod +x /app/start.sh
-
-RUN yum install -y yum-utils
-RUN yum groupinstall -y development
-RUN yum install -y ius-release-1.0-15.ius.centos7.noarch.rpm
-RUN yum install -y python36u
-RUN yum install -y python36u-pip
 
 RUN pip3.6 install -r requirements.txt
 
