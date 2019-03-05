@@ -18,10 +18,10 @@ RUN mkdir /.npm
 RUN chmod -R 777 /.npm
 
 RUN pip3.6 install -r requirements.txt
-RUN pushd frontend/
+WORKDIR /app/frontend/
 RUN npm install
 RUN ng build
-RUN popd 
+WORKDIR /app 
 
 EXPOSE 8201
 
