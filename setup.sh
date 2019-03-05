@@ -16,7 +16,4 @@ echo "successfully activated your virtual environment"
 echo "about to install from requirements.txt"
 ./venv/bin/pip3 install -r requirements.txt
 
-echo "Installing Django Channels"
-./venv/bin/pip3 install channels
-
 echo "Finished installing dependencies"
