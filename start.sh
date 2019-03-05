@@ -2,11 +2,6 @@
 
 echo Doing project set up
 
-echo Doing ng build
-pushd frontend/
-ng build
-popd
-
 echo collecting static now
 exec python3.6 manage.py collectstatic
 
