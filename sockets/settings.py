@@ -76,16 +76,7 @@ WSGI_APPLICATION = 'sockets.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': os.environ.get('apps_ps_database_test'),
-            'USER': os.environ.get('apps_ps_user_test'),
-            'PASSWORD': os.environ.get('apps_ps_pass_test'),
-            'HOST': os.environ.get('apps_ps_ip_test'),
-            'PORT': os.environ.get('apps_ps_port_test'),
-        }
-    }
+DATABASES = {}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
