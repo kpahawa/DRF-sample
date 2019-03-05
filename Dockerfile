@@ -13,6 +13,8 @@ RUN mkdir /app/staticfiles/
 RUN chmod +x /app/staticfiles/ 
 
 RUN  chmod -R 777 /app
+
+RUN mkdir /.npm
 RUN chmod -R 777 /.npm
 
 RUN pip3.6 install -r requirements.txt
