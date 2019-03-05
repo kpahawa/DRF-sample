@@ -6,6 +6,8 @@ ADD . /app
 
 ADD start.sh /app/start.sh
 RUN chmod +x /app/start.sh
+RUN chmod +x /app/frontend/
+RUN chmod +x /app/staticfiles/ 
 
 RUN pip3.6 install -r requirements.txt
 
